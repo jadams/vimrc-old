@@ -15,12 +15,11 @@
 #   ./update.sh repos powerline
 #
 
-cd ~/.dotfiles
 
-vimdir=$PWD/.vim
+vimdir=$HOME/.vim
 bundledir=$vimdir/bundle
 tmp=/tmp/$LOGNAME-vim-update
-me=.vim/update.sh
+me=$vimdir/update.sh
 
 # I have an old server with outdated CA certs.
 if [ -n "$INSECURE" ]; then
