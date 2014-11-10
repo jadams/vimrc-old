@@ -1,5 +1,7 @@
-Ian's Vim Configuration
+John's Vim Configuration
 -----------------------
+
+Branched without other dot files from https://github.com/statico/dotfiles
 
 [vimrc](.vim/vimrc) and [gvimrc](.vim/gvimrc) are my configurations, but they also source `~/.vimlocal` and `~/.gvimlocal` respectively which allows per-host customization.
 
