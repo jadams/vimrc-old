@@ -18,5 +18,6 @@ then
 fi
 
 cp $vimdir/vimrc $vimrc
+touch $HOME/.vimlocal
 
 echo 'Done!'
