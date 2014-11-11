@@ -5,7 +5,7 @@
 "  \ V /| | | | | | | | | (__
 "   \_/ |_|_| |_| |_|_|  \___|
 "
-" Ian's .vimrc file
+" John's .vimrc file
 "
 " Section: Key mappings {{{1
 "--------------------------------------------------------------------------
@@ -366,6 +366,8 @@ nmap ; :CtrlPBuffer<CR>
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=0
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
 " GitGutter
 let g:gitgutter_sign_added = '∙'

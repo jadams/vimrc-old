@@ -17,7 +17,7 @@ then
   mv $vimrc $HOME/.vimrc.old
 fi
 
-cp $vimdir/vimrc $vimrc
+ln -s $vimdir/vimrc $vimrc
 touch $HOME/.vimlocal
 
 echo 'Done!'
