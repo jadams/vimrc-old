@@ -60,13 +60,12 @@ repos=(
   https://github.com/vim-scripts/keepcase.vim.git
   https://github.com/vim-scripts/oceandeep.git
   https://github.com/wavded/vim-stylus.git
-
+  https://github.com/jnurmine/Zenburn.git
   )
 
 # Here's a list of everything else to download in the format
 # <destination>;<url>[;<filename>]
 other=(
-  'zenburn/colors;http://slinky.imukuppi.org/zenburn/zenburn.vim'
   'wombat/colors;http://files.werx.dk/wombat.vim'
   'glsl/syntax;http://www.vim.org/scripts/download_script.php?src_id=3194;glsl.vim'
   )
