@@ -12,11 +12,11 @@ then
   git clone https://github.com/hexb-it/vimrc.git $vimdir
 fi
 
-if [ -f $HOME/.vimrc ];
+if [ -f $vimrc ];
 then
-  mv $HOME/.vimrc $HOME/.vimrc.old
+  mv $vimrc $HOME/.vimrc.old
 fi
 
-cp $vimdir/vimrc .vimrc
+cp $vimdir/vimrc $vimrc
 
 echo 'Done!'
