@@ -22,14 +22,13 @@ nmap \k :TlistToggle<CR>
 nmap \l :setlocal number!<CR>:setlocal number?<CR>
 nmap \M :set noexpandtab tabstop=8 softtabstop=4 shiftwidth=4<CR>
 nmap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
-nmap \o :set paste!<CR>:set paste?<CR>
+nmap \p :set paste!<CR>:set paste?<CR>
 nmap \q :nohlsearch<CR>
 nmap \s :setlocal invspell<CR>
 nmap \t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
 nmap \T :set expandtab tabstop=8 shiftwidth=8 softtabstop=4<CR>
 nmap \u :setlocal list!<CR>:setlocal list?<CR>
 nmap \w :setlocal wrap!<CR>:setlocal wrap?<CR>
-nmap \x :w<CR>:%! xmllint --format - <CR>
 nmap \Y :vertical resize 40<CR>:wincmd l<CR>
 nmap \y :exec "vertical resize " . (80 + (&number * &numberwidth))<CR>:wincmd l<CR>
 nmap \z :w<CR>:!open %<CR><CR>
@@ -235,6 +234,8 @@ set matchtime=2             " Tenths of second to hilight matching paren
 set modelines=5             " How many lines of head & tail to look for ml's
 silent! set mouse=nvc       " Use the mouse, but not in insert mode
 set nobackup                " No backups left after done editing
+set nowb                    " No write backup
+set noswapfile              " No swapfiles
 set nonumber                " No line numbers to start
 set visualbell t_vb=        " No flashing or beeping at all
 set nowritebackup           " No backups made while editing
@@ -257,10 +258,17 @@ set wildmenu                " Show possible completions on command line
 set wildmode=list:longest,full " List all options and complete
 set wildignore=*.class,*.o,*~,*.pyc,.git,node_modules  " Ignore certain files in tab-completion
 
+" => Turn persistent undo on 
+try
+    set undodir=~/.vim/undo
+    set undofile
+catch
+endtry
+
 " Section: Commands & Functions {{{1
 "--------------------------------------------------------------------------
 
-" i always, ALWAYS hit ":W" instead of ":w"
+" I always, ALWAYS hit ":W" instead of ":w"
 command! Q q
 command! W w
 
