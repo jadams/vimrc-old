@@ -76,11 +76,6 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" Search for the word under the cursor in the current directory
-nmap <M-k> :Ag! "\b<cword>\b" <CR>
-nmap <Esc>k :Ag! "\b<cword>\b" <CR>
-nmap ˚! :Ag "\b<cword>\b" <CR>
-
 " Use Alt-N/P to go to next/prev quickfix or :Ag serach result.
 nmap <Esc>n :cnext<CR>
 nmap <Esc>p :cprevious<CR>
@@ -332,12 +327,6 @@ call pathogen#helptags()
 " for any plugins that use this, make their keymappings use comma
 let mapleader = ","
 let maplocalleader = ","
-
-" perl.vim
-let perl_include_pod = 1
-
-" perldoc
-let g:perldoc_program='perldoc'
 
 " Explore.vim (comes with Vim 6)
 let explVertical = 1
